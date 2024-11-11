@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 public enum CustomErrors: Error, Sendable {
     case wrongResponse
@@ -6,7 +6,7 @@ public enum CustomErrors: Error, Sendable {
     case decodingError(String)
 }
 
-public final class NetworkService {
+public final class NetworkService: NetworkServiceProtocol {
     
     public init() {}
     
@@ -85,3 +85,4 @@ public final class NetworkService {
         }.resume()
     }
 }
+
